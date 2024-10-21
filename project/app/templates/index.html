@@ -1,0 +1,24 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BCCA Leadership Teams</title>
+    <link rel="stylesheet" href="{%static "index.css" %}">
+  </head>
+  <body>
+    {% if teams %}
+    <h1>Leadership Teams</h1>
+    {% for team in teams %}
+    <li><a href="{% url 'teamView' team_name=team %}">{{team}}</a></li>
+    {% endfor %}
+    <p>{{ team.name }}</p>
+    {% elif team %}
+    <h1>{{ team.name }}</h1>
+    <p>{{ team.desc }}</p>
+    {% for i in team.members %}
+    <li>{{i}}</li>
+    {% endfor %} {% endif %}
+  </body>
+</html>
