@@ -13,12 +13,12 @@ class Team:
 teamdata: Dict[str, Team] = {
     "Management": Team(
         name="Management",
-        desc="They manage",
+        desc="Manages chores such as, kitchen cleaning, taking out the trash, and sweeping, and chore schedules. ",
         members=['Chris','Tanner','Kilan','Aidan']
     ),
     "Procurement": Team(
         name='Procurement',
-        desc='Procures',
+        desc='Procures food and any other items that may be needed for the building. Prepares lunch everyday for students.',
         members=['Markel','Aaron','Jacob','Arthur']
     ),
     'Community': Team(
